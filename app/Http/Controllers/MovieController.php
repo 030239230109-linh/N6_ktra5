@@ -23,7 +23,7 @@ class MovieController extends Controller
 }
 public function trang_the_loai($id)
 {
-    
+
     $genres = DB::table('genre')->get();
 
 
@@ -41,4 +41,5 @@ public function trang_the_loai($id)
 
     return view('movie.index', compact('genres', 'movies', 'genreName'));
 }
+
 }
