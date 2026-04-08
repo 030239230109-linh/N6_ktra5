@@ -1,6 +1,5 @@
 <x-movie-layout>
     <x-slot name="title">Trang Chủ Movie</x-slot>
-
     <div class="list-movie">
         @foreach($movies as $item)
             <div class="movie">

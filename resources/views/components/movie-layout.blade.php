@@ -11,7 +11,6 @@
         <script src="{{asset('library/jquery-3.7.1.js')}}" ></script>
         <style>
             /* Định dạng màu nền và màu chữ của menu */
-          
             .list-movie
             {
                 display:grid;

@@ -23,7 +23,7 @@ class MovieController extends Controller
 }
 public function trang_the_loai($id)
 {
-
+    
     $genres = DB::table('genre')->get();
 
 
