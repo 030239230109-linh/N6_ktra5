@@ -7,38 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class MovieController1 extends Controller
 {
-    public function index()
-    {
-        $title = 'Trang Chủ Movie';
-
-        $genre = DB::table('genre')->get();
-
-        $movies = DB::table('movie')
-            ->where('popularity', '>', 450)
-            ->where('vote_average', '>', 7)
-            ->orderBy('release_date', 'desc')
-            ->limit(12)
-            ->get();
-
-        return view('movie.index', compact('title', 'genre', 'movies'));
-    }
-
-    public function trang_the_loai($id)
-    {
-        $title = 'Phim theo thể loại';
-
-        $genre = DB::table('genre')->get();
-
-        $movies = DB::table('movie')
-            ->join('movie_genre', 'movie.id', '=', 'movie_genre.movie_id')
-            ->where('movie_genre.genre_id', $id)
-            ->orderBy('movie.release_date', 'desc')
-            ->limit(12)
-            ->select('movie.*')
-            ->get();
-
-        return view('movie.index', compact('title', 'genre', 'movies'));
-    }
 
     public function show($id)
     {
