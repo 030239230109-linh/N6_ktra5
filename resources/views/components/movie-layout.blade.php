@@ -15,7 +15,7 @@
             .list-movie
             {
                 display:grid;
-                grid-template-columns:repeat(4,25%);
+                grid-template-columns:repeat(4,1fr);
             }
             .movie
             {
@@ -31,10 +31,36 @@
                 color: black;
                 text-decoration:none;
             }
-            .movie-info
-            {
-                display:grid;
-                grid-template-columns:repeat(2,30% 70%);
+            .movie:hover {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .movie img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-bottom: 1px solid #eee;
+            }
+            .movie-info {
+                /* display: grid;*/
+                /* grid-template-columns: repeat(2, 30% 70%);*/
+                
+                display: block;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .movie-info h3 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: bold;
+                color: #000;
+                line-height: 1.4;
+            }
+
+            .movie-info p {
+                margin: 5px 0 0 0;
+                font-size: 14px;
+                color: #000;
             }
             .banner
             {
